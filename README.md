@@ -1,5 +1,9 @@
 
 The honeypot was operated continuously for more than one month, during which it accumulated a substantial volume of network traffic, authentication attempts, commands, and other security-related events. Given the scale of the collected dataset, performing an exhaustive analysis of every event would require significant time and effort and would extend beyond the practical scope of this investigation. Therefore, rather than attempting to analyze the entire dataset, the following sections focus on **selected segments and time intervals throughout the honeypot's operational period**. These samples were chosen to provide representative coverage of the different types of activity observed while also highlighting particularly interesting, unusual, or security-relevant events. This approach allows the investigation to identify meaningful attack patterns and behaviors while keeping the analysis manageable and focused.
+
+NOTE: To view some of the data discussed in this article, check the "HoneyPot Data" folder in this repo
+
+
 <img width="1500" height="707" alt="image" src="https://github.com/user-attachments/assets/e0e601aa-3141-404d-9421-2a270bdf7046" />
 
 # 1. Brute-Force Credential Taxonomy
@@ -7,6 +11,7 @@ The honeypot was operated continuously for more than one month, during which it 
 ## A. Username taxonomy
 
 After analyzing over 41 million logs, at the moment of writing the report, some of the top 50  usernames used for brute-force SSH/RDP and other protocols are:
+
 
 <img width="927" height="473" alt="Username Tagcloud" src="https://github.com/user-attachments/assets/de29c51a-ed54-487d-8bf0-422f57e69c7d" />
 
@@ -34,6 +39,7 @@ Some usernames indicate a specific target in the brute-forcing.  Looking at thes
 
 Similarly, some of the top 50  passwords used for brute-force SSH/RDP and other protocols are:
 
+
 <img width="928" height="475" alt="Password Tagcloud" src="https://github.com/user-attachments/assets/01226332-6938-4a92-a4df-a6ca1f2508c9" />
 
 
@@ -42,6 +48,7 @@ It looks like events from multiple protocols & services being normalized into a 
 # 2. Successful Logins
 
 While Filtering for successful authentication to the honeypot service, during that server uptime it was logged over 400 successful-login records on SSH and Telnet Protocols.
+
 
 <img width="1917" height="816" alt="Succ_logins logs" src="https://github.com/user-attachments/assets/f5b3905c-19b8-4caa-af4c-62d260606a1e" />
 
@@ -465,6 +472,7 @@ chattr +ai
 For the last section, I will try to find what kind of malware were deployed on the honeypot. Instead of examining every directory on the server and try to guess, I will use ClamAV because it is a free, open-source cross-platform antivirus. 
 
 ClamAV identified multiple malware artifacts within T-Pot's captured data, including cryptocurrency miners, Mirai, XorDDoS, WannaCry-related ransomware, and other Windows and Linux malware. These detections demonstrate that malicious payloads were delivered to or captured by the honeypot services; they do not independently establish execution or infection of the underlying Oracle Cloud host.
+
 
 <img width="1230" height="427" alt="clamAV scan Results" src="https://github.com/user-attachments/assets/50b87426-141f-4a3e-bb0b-c600d89ce4e4" />
 
