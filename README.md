@@ -362,11 +362,6 @@ execute
 delete
 ```
 
-### Assessment
-
-Deleting deployment scripts reduces the number of artifacts left behind after execution.
-
-This behavior is consistent with **artifact cleanup / defense evasion**, although the exact contents of the scripts would be required to determine precisely what they performed.
 
 ## I. RedTail Indicator
 
@@ -384,20 +379,7 @@ redtail_bot_telnet_ok
 
 The decoded string `redtail_bot_telnet_ok` is a strong indicator that the retrieved script was associated with RedTail-style bot/Telnet deployment. Combined with the payload retrieval behavior and the external infrastructure involved, the activity is highly consistent with RedTail malware deployment.
 
-### Assessment
 
-The combination of:
-
-```
-redtail_bot_telnet_ok
-217.60.195.113
-wget/curl/scp
-telnet
-hidden sshd
-SSH persistence
-```
-
-provides strong evidence of automated malware deployment rather than ordinary interactive administration.
 
 ## J. MITRE ATT&CK Mapping
 
