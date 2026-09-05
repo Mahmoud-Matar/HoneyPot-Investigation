@@ -6,7 +6,8 @@ The honeypot was operated continuously for more than one month, during which it 
 
 After analyzing over 41 million logs, at the moment of writing the report, some of the top 50  usernames used for brute-force SSH/RDP and other protocols are:
 
-![[Username Tagcloud.png]]
+<img width="927" height="473" alt="Username Tagcloud" src="https://github.com/user-attachments/assets/de29c51a-ed54-487d-8bf0-422f57e69c7d" />
+
 
 Some usernames indicate a specific target in the brute-forcing.  Looking at these usernames, there are several target-specific clusters hiding inside what initially looks like generic brute forcing. Some of these clearly indicate attempts to target particular technologies, applications, cloud environments, or organizations.
 
@@ -31,7 +32,8 @@ Some usernames indicate a specific target in the brute-forcing.  Looking at thes
 
 Similarly, some of the top 50  passwords used for brute-force SSH/RDP and other protocols are:
 
-![[Password Tagcloud.png]]
+<img width="928" height="475" alt="Password Tagcloud" src="https://github.com/user-attachments/assets/01226332-6938-4a92-a4df-a6ca1f2508c9" />
+
 
 It looks like events from multiple protocols & services being normalized into a common field, or you're looking at a field whose meaning isn't universally "password."
 
@@ -39,7 +41,8 @@ It looks like events from multiple protocols & services being normalized into a 
 
 While Filtering for successful authentication to the honeypot service, during that server uptime it was logged over 400 successful-login records on SSH and Telnet Protocols.
 
-![[Succ_logins logs.png]]
+<img width="1917" height="816" alt="Succ_logins logs" src="https://github.com/user-attachments/assets/f5b3905c-19b8-4caa-af4c-62d260606a1e" />
+
 
 By exporting the values of | @timestamp | src_ip | username | password | message | protocol | to a .csv file to do further analysis it was found that . 
 
@@ -461,7 +464,8 @@ For the last section, I will try to find what kind of malware were deployed on t
 
 ClamAV identified multiple malware artifacts within T-Pot's captured data, including cryptocurrency miners, Mirai, XorDDoS, WannaCry-related ransomware, and other Windows and Linux malware. These detections demonstrate that malicious payloads were delivered to or captured by the honeypot services; they do not independently establish execution or infection of the underlying Oracle Cloud host.
 
-![[clamAV scan Results.png]]
+<img width="1230" height="427" alt="clamAV scan Results" src="https://github.com/user-attachments/assets/50b87426-141f-4a3e-bb0b-c600d89ce4e4" />
+
 
 # 5. Conclusion
 
