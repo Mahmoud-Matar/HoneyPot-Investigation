@@ -1,7 +1,7 @@
 
 The honeypot was operated continuously for more than one month, during which it accumulated a substantial volume of network traffic, authentication attempts, commands, and other security-related events. Given the scale of the collected dataset, performing an exhaustive analysis of every event would require significant time and effort and would extend beyond the practical scope of this investigation. Therefore, rather than attempting to analyze the entire dataset, the following sections focus on **selected segments and time intervals throughout the honeypot's operational period**. These samples were chosen to provide representative coverage of the different types of activity observed while also highlighting particularly interesting, unusual, or security-relevant events. This approach allows the investigation to identify meaningful attack patterns and behaviors while keeping the analysis manageable and focused.
 
-NOTE: To view some of the data discussed in this article, check the "[HoneyPot Data] (https://github.com/Mahmoud-Matar/HoneyBot-Investigation-Data/tree/main/HoneyPot%20Data)" folder in this repo
+NOTE: To view some of the data discussed in this article, check the [HoneyPot Data] (./HoneyPot Data) folder in this repo
 
 
 <img width="1500" height="707" alt="image" src="https://github.com/user-attachments/assets/e0e601aa-3141-404d-9421-2a270bdf7046" />
